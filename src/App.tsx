@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 function Calculator() {
   const [input, setInput] = useState("");
 
-  // Define arrays for the buttons
   const buttons = [
     ["C", "←", "/", "*"],
     ["7", "8", "9", "-"],
@@ -12,7 +11,6 @@ function Calculator() {
     ["0", "="],
   ];
 
-  // Function to handle button clicks
   const handleClick = (value: string) => {
     if (value === "=") {
       try {
@@ -56,7 +54,23 @@ function Calculator() {
   }, [input]);
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
+    <div className="flex items-center justify-center flex-col h-screen bg-gray-100">
+      <h1 className="text-4xl mb-4">
+        <span className="text-red-500">A</span>
+        <span className="text-orange-500">l</span>
+        <span className="text-yellow-300">l</span>
+        <span className="text-green-500">i</span>
+        <span className="text-blue-500">s</span>
+        <span className="text-violet-500">o</span>
+        <span className="text-red-500">n</span>{" "}
+        <span className="text-orange-500">B</span>
+        <span className="text-yellow-300">u</span>
+        <span className="text-green-500">r</span>
+        <span className="text-blue-500">g</span>
+        <span className="text-violet-500">e</span>
+        <span className="text-red-500">r</span>
+        <span className="text-orange-500">s</span> Calculator
+      </h1>
       <div className="w-64 p-4 border-2 border-black rounded-lg bg-white">
         <div className="h-12 mb-4 p-2 text-right text-2xl text-white bg-gray-800 rounded">
           {input || "0"}
