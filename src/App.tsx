@@ -55,7 +55,7 @@ function Calculator() {
 
   return (
     <div className="flex items-center justify-center flex-col h-screen bg-gray-100">
-      <h1 className="text-4xl mb-4">
+      <h1 className="text-4xl mb-4 font-bold">
         <span className="text-red-500">A</span>
         <span className="text-orange-500">l</span>
         <span className="text-yellow-300">l</span>
