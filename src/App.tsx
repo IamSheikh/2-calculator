@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function Calculator() {
+const App = () => {
   const [input, setInput] = useState("");
 
   const buttons = [
@@ -71,8 +71,35 @@ function Calculator() {
         <span className="text-red-500">r</span>
         <span className="text-orange-500">s</span> Calculator
       </h1>
-      <div className="w-64 p-4 border-2 border-black rounded-lg bg-white">
+      {/* <div className="w-64 p-4 border-2 border-black rounded-lg bg-white">
         <div className="h-12 mb-4 p-2 text-right text-2xl text-white bg-gray-800 rounded">
+          {input || "0"}
+        </div>
+        <div className="grid grid-cols-4 gap-2">
+          {buttons.flat().map(
+            (button, index) =>
+              button && (
+                <button
+                  key={index}
+                  onClick={() => handleClick(button)}
+                  className={`p-4 ${
+                    button === "="
+                      ? "col-span-2 bg-green-500 text-white"
+                      : button === "0"
+                      ? "col-span-2 bg-gray-200"
+                      : button.match(/[C←/*\-+=]/)
+                      ? "bg-gray-300"
+                      : "bg-gray-200"
+                  } rounded`}
+                >
+                  {button}
+                </button>
+              )
+          )}
+        </div>
+      </div> */}
+      <div className="w-64 p-4 border-2 border-black rounded-lg bg-white">
+        <div className="h-12 mb-4 p-2 text-right text-2xl text-white bg-gray-800 rounded overflow-x-auto whitespace-nowrap custom-scrollbar">
           {input || "0"}
         </div>
         <div className="grid grid-cols-4 gap-2">
@@ -100,6 +127,6 @@ function Calculator() {
       </div>
     </div>
   );
-}
+};
 
-export default Calculator;
+export default App;
